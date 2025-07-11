@@ -165,7 +165,7 @@ For issues and questions, please refer to the project documentation or contact t
 
 ## 📄 License
 
-[Add your license information here]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
