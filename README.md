@@ -7,12 +7,12 @@ A Spring Boot-based Eureka Discovery Server for the Photo App microservices arch
 The PhotoApp Discovery Service is built using:
 - **Spring Boot** - Main framework
 - **Spring Cloud Netflix Eureka Server** - Service discovery and registration
-- **Maven** - Build tool and dependency management
+- **Gradle** - Build tool and dependency management
 
 ## 📋 Prerequisites
 
-- Java 8 or higher
-- Maven 3.6 or higher
+- Java 17 or higher
+- Gradle 8.6 or higher (or use the included wrapper)
 - Git
 
 ## 🛠️ Setup and Installation
@@ -25,17 +25,12 @@ cd PhotoAppDiscoveryService
 
 ### 2. Build the Project
 ```bash
-mvn clean install
+./gradlew build
 ```
 
 ### 3. Run the Application
 ```bash
-mvn spring-boot:run
-```
-
-Or using the Maven wrapper:
-```bash
-./mvnw spring-boot:run
+./gradlew bootRun
 ```
 
 ## ⚙️ Configuration
@@ -110,19 +105,19 @@ C:\Zenith\Process\discovery{timestamp}{random}.pid
 
 Run the tests using:
 ```bash
-mvn test
+./gradlew test
 ```
 
 ## 📦 Building for Production
 
 ### Create JAR File
 ```bash
-mvn clean package
+./gradlew bootJar
 ```
 
 ### Run JAR File
 ```bash
-java -jar target/PhotoAppDiscoveryService-{version}.jar
+java -jar build/libs/PhotoAppDiscoveryService-{version}.jar
 ```
 
 ## 🔒 Security Considerations
